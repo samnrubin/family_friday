@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>It's Family Friday!</h1>
+
+<table>
+  <tbody>
+    <% @employee_groups.each_with_index do |employee_group, index| %>
+      <tr>
+      <td>
+        <b>Group <%= index + 1 %></b>
+      </td>
+        <% employee_group.each do |employee| %>
+          <td><%= employee.name %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Show Employees', employees_path %>
