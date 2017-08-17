@@ -62,7 +62,7 @@ class EmployeesController < ApplicationController
   end
 
   def groups
-    @employee_groups = Employee.groups
+    @employee_groups = Employee.groups(Employee.all)
   end
 
 
